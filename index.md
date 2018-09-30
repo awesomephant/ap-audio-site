@@ -11,9 +11,9 @@ Hey Marios & AP folk,
 
 as discussed on Friday, here are some layout prototypes for the Art Licks sound exhibition website:
 
-- [Random Positioning](/ap-audio-site/random/)
-- [Grid](/ap-audio-site/grid/)
-- [Circle](/ap-audio-site/circle/)
+- [Random Positioning](/ap-audio-site/random.html)
+- [Grid](/ap-audio-site/grid.html)
+- [Circle](/ap-audio-site/circle.html)
 
 I think random positioning is the most successful, especially as it will work with whatever number of tracks will be on the website (Following Marios' sketches).
 
