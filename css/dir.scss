@@ -1,0 +1,36 @@
+---
+---
+
+@import "vars";
+@import "reset";
+
+body {
+    font-family: sans-serif;
+    padding: 5%;
+    font-size: 1.1rem;
+    max-width: 48rem;
+    line-height: 1.4;
+}
+
+a {
+    color: darken(cornflowerblue, 15);
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: .6em;
+}
+
+ul {
+    margin-bottom: .6em;
+    list-style: disc inside;
+}
+
+blockquote {
+    color: rgb(120,130,130);
+}
+
+header {
+    margin-bottom: 2em;
+    font-size: 1.5rem;
+}

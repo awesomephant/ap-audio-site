@@ -1,0 +1,12 @@
+<svg class='bg' 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 423.3333 302">
+    <defs>
+        <linearGradient id="Sky" x1="72" y1="150" x2="360" y2="150" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="hotpink"/>
+            <stop offset="0.344" stop-color="pink"/>
+            <stop offset="0.9944" stop-color="pink"/>
+        </linearGradient>
+    </defs>
+    <circle class="cls-1" cx="216" cy="150" r="144"/>
+</svg>

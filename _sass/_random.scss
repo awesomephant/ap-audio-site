@@ -1,0 +1,22 @@
+.tracks {
+    position: relative;
+    perspective: 400px;
+}
+
+.tracks-item {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    transition: 400ms;
+    position: absolute;
+    animation: hover infinite ease-in-out, fade-in both;
+    @for $i from 1 to 10 {
+        &:nth-child(#{$i}){
+            animation-duration: 4000ms + 200ms * $i, 1200ms;
+            animation-delay: 100ms * $i, 300ms * $i;
+        }
+    }
+    audio {
+        display: none;
+    }
+}

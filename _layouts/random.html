@@ -1,0 +1,51 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AP Audio</title>
+    <link rel="stylesheet" href="/css/random.css">
+</head>
+<body>
+    <header class="site-header">
+        Assembly Point \ Art Licks Weekend 2018
+    </header>
+    {% include blob.svg %}
+    <ul class="tracks">
+        {% for track in site.data.tracks %}
+        <li class="tracks-item">
+            <button class='btn' id="play-btn">
+                <div class="icon">
+                    {% include play.svg %}
+                    {% include pause.svg %}
+                </div>
+            </button>
+            <div class="track-item-copy">
+                <h3 class='track-artist'>{{track.artist}}</h3>
+                <h2 class='track-title'>{{track.title}}</h2>
+                <audio src="" controls></audio>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <footer class="marquee">
+        <span>
+            God is only on the periphery of religion
+        </span>
+        Now Playing: Title by Artist Name
+        <span>
+            God is only on the periphery of religion
+        </span>
+        Now Playing: Title by Artist Name
+        <span>
+            God is only on the periphery of religion
+        </span>
+        Now Playing: Title by Artist Name
+    </footer>
+    <script src="/dist/main.js"></script>
+    <script src="/dist/random.js"></script>
+</body>
+</html>

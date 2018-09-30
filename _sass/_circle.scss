@@ -1,0 +1,40 @@
+.tracks {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: calc(90vw + 2px);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.tracks-item {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 30vw;
+    position: relative;
+    text-align: center;
+    animation: hover infinite ease-in-out, fade-in both;
+    @for $i from 1 to 10 {
+        &:nth-child(#{$i}){
+            animation-duration: 4000ms + 200ms * $i, 1200ms;
+            animation-delay: 100ms * $i, 300ms * $i;
+        }
+    }
+
+    &:nth-child(2){
+      top: -10vh;
+    }
+    &:nth-child(5){
+      top: 10vh;
+    }
+    audio {
+        display: none;
+    }
+    .track-artist {
+      margin-bottom: .2em;
+    }
+}
