@@ -5,7 +5,7 @@
 layout: dir
 ---
 
-> September 29, 2018
+> September 30, 2018
 
 Hey Marios & AP folk,
 
@@ -24,3 +24,10 @@ The typeface is [Sporting Grotesque](https://velvetyne.fr/fonts/sporting-grotesq
 Let me know what you think.
 
 --max
+
+
+> September 28, 2018
+
+Interface sketches by Marios:
+
+![Sketches](/ap-audio-site/assets/IMG_4082.JPG)
