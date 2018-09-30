@@ -15,7 +15,7 @@ as discussed on Friday, here are some layout prototypes for the Art Licks sound 
 - [Grid](/grid/)
 - [Circle](/circle/)
 
-I think random positioning is the most successful, especially as it will work with whatever number of tracks will be on the website. 
+I think random positioning is the most successful, especially as it will work with whatever number of tracks will be on the website (Following Marios' sketches). 
 
 I've taken the liberty to add the coloured background to make things a bit more visually engaging. The idea here is that the blob would react in some subtle way with the sound (maybe pulsating). The colours I've chosen are essentially arbitrary, maybe Marios could pick some colour combinations to go with particular tracks? Or, of course, we could do something else entirely.
 
