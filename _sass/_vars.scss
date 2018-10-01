@@ -1,4 +1,15 @@
-$sans: "Sporting Grotesque";
+@font-face {
+    font-family: "Sporting";
+    font-weight: 800;
+    src: url('/ap-audio-site/assets/SportingGrotesque-Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: "Sporting";
+    font-weight: 400;
+    src: url('/ap-audio-site/assets/SportingGrotesque-Regular.otf') format('opentype');
+}
+
+$sans: "Sporting";
 $black: rgb(2,2,20);
 
 $type-medium: calc(1rem + .4vw);
