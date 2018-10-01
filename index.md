@@ -5,6 +5,12 @@
 layout: dir
 ---
 
+> October 01, 2018
+
+We're going with the [circular layout](/ap-audio-site/circle.html).
+
+Per Marios' suggestion, I've added the title *GIOTPOR* in the centre of of the layout and made some adjustments to the chyron at the bottom and the background colours. On smaller screens, the layout switches to a simplified list view. The order of this list will be randomised to avoid the suggestion of hierarchy.
+
 > September 30, 2018
 
 Hey Marios & AP folk,
