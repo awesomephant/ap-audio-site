@@ -1,40 +1,84 @@
+body {
+    overflow-x: hidden;
+}
 .tracks {
-    display: flex;
-    flex-wrap: wrap;
     position: absolute;
-    top: 55%;
-    left: 50%;
-    width: calc(90vw + 2px);
-    transform: translateY(-50%) translateX(-50%);
+    width: 100%;
+    padding-top: 5vh;
+    display: flex;
+    height: calc(100vh - 8rem);
+    flex-flow: column;
+    align-items: center;
+    @include bp(m){
+        height: auto;
+        flex-flow: row wrap;
+        padding-top: 0;
+        top: 50%;
+        left: 50%;
+        max-width: calc(90vw + 2px);
+        transform: translateY(-50%) translateX(-50%);
+    }
 }
 
 .tracks-item {
     display: flex;
     flex-flow: row;
-    align-items: center;
+    font-size: calc(2vw + 2vh);
+    margin-bottom: .5em;
+    flex-basis: 100%;
+    width: 100%;
     justify-content: center;
-    width: 30vw;
-    height: 30vw;
-    position: relative;
-    text-align: center;
-    animation: hover infinite ease-in-out, fade-in both;
+    margin-left: -3rem; // Width of the play button
+    align-items: center;
+    @include bp(m){
+        margin-left: 0; // Width of the play button
+        justify-content: center;
+        flex-basis: 30vw;
+        flex-shrink: 0;
+        font-size: $type-medium;
+        margin-bottom: 0;
+        width: 30vw;
+        height: 30vw;
+        animation: hover infinite ease-in-out, fade-in both;
+        position: relative;
+        text-align: center;
+    }
     @for $i from 1 to 10 {
         &:nth-child(#{$i}){
             animation-duration: 4000ms + 200ms * $i, 1200ms;
             animation-delay: 100ms * $i, 300ms * $i;
         }
     }
-
-    &:nth-child(2){
-      top: -10vh;
-    }
-    &:nth-child(5){
-      top: 10vh;
+    @include bp(m){
+        &:nth-child(1){
+            top: 5vh;
+            left: -5vw;
+        }
+        &:nth-child(2){
+            top: -10vh;
+        }
+        &:nth-child(5){
+            top: 10vh;
+        }
     }
     audio {
         display: none;
     }
     .track-artist {
+        font-weight: bold;
       margin-bottom: .2em;
     }
+}
+
+.site-title {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    letter-spacing: .05em;
+    color: white;
+    mix-blend-mode: multiply;
+    z-index: 200;
+    font-size: 12vw;
+    transform: translateY(-50%);
 }

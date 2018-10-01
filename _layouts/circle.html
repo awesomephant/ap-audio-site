@@ -11,8 +11,11 @@
 </head>
 <body>
     <header class="site-header">
-        Assembly Point \ Art Licks Weekend 2018
+        Assembly Point <span>Art Licks Weekend 2018</span>
     </header>
+    <h1 class="site-title">
+        GIOTPOR
+    </h1>
     {% include blob.svg %}
     <ul class="tracks">
         {% for track in site.data.tracks %}
@@ -32,18 +35,7 @@
         {% endfor %}
     </ul>
     <footer class="marquee">
-        <span>
-            God is only on the periphery of religion
-        </span>
-        Now Playing: Title by Artist Name
-        <span>
-            God is only on the periphery of religion
-        </span>
-        Now Playing: Title by Artist Name
-        <span>
-            God is only on the periphery of religion
-        </span>
-        Now Playing: Title by Artist Name
+        <span>God is only on the periphery of religion</span><em>Now Playing: Title by Artist Name</em><span>God is only on the periphery of religion</span><em>Now Playing: Title by Artist Name</em><span>God is only on the periphery of religion</span>
     </footer>
     <script src="/ap-audio-site/dist/main.js"></script>
 </body>
