@@ -5,80 +5,98 @@ body {
     position: absolute;
     width: 100%;
     padding-top: 5vh;
-    display: flex;
     height: calc(100vh - 8rem);
     flex-flow: column;
     align-items: center;
     @include bp(m){
-        height: auto;
-        flex-flow: row wrap;
+        height: 100vh;
+        display: block;
+        position: relative;
         padding-top: 0;
         top: 50%;
         left: 50%;
-        max-width: calc(90vw + 2px);
+        width: 100%;
         transform: translateY(-50%) translateX(-50%);
     }
 }
 
+.top {
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.details {
+  position: relative;
+  top: 100vh;
+  background-color: $black;
+  z-index: 400;
+  color: white;
+  padding: 2%;
+  font-weight: normal;
+  
+  .credits {
+    font-size: 1.7rem;
+    padding-top: 2rem;
+    p {
+        font-family: 'Times New Roman', Times, serif;
+      margin-bottom: .2em;
+    }
+  }
+}
+.copy {
+    font-size: calc(1rem + 1.5vw);
+    line-height: 1.3;
+    word-spacing: -.09em;
+    em {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.4em;
+    }
+}
+
 .tracks-item {
-    display: flex;
-    flex-flow: row;
     font-size: calc(2vw + 2vh);
     margin-bottom: .5em;
     flex-basis: 100%;
     width: 100%;
-    justify-content: center;
-    margin-left: -3rem; // Width of the play button
-    align-items: center;
     @include bp(m){
-        margin-left: 0; // Width of the play button
-        justify-content: center;
-        flex-basis: 30vw;
-        flex-shrink: 0;
         font-size: $type-medium;
-        margin-bottom: 0;
-        width: 30vw;
-        height: 30vw;
-        animation: hover infinite ease-in-out, fade-in both;
-        position: relative;
-        text-align: center;
-    }
-    @for $i from 1 to 10 {
-        &:nth-child(#{$i}){
-            animation-duration: 4000ms + 200ms * $i, 1200ms;
-            animation-delay: 100ms * $i, 300ms * $i;
-        }
-    }
-    @include bp(m){
-        &:nth-child(1){
-            top: 5vh;
-            left: -5vw;
-        }
-        &:nth-child(2){
-            top: -10vh;
-        }
-        &:nth-child(5){
-            top: 10vh;
-        }
+        position: absolute;
+        left: 50%;
+        top: 50%;
     }
     audio {
         display: none;
     }
     .track-artist {
         font-weight: bold;
-      margin-bottom: .2em;
+        margin-bottom: .2em;
     }
 }
 
-.site-title {
+.track-inner {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    animation: hover infinite ease-in-out, fade-in both;
+    @include bp(m){
+        justify-content: center;
+
+    }
+}
+
+.site-title{
     position: absolute;
     top: 50%;
-    width: 100%;
     text-align: center;
-    letter-spacing: .05em;
-    color: white;
     mix-blend-mode: multiply;
+    width: 100%;
     z-index: 200;
-    font-size: 12vw;
     transform: translateY(-50%);
+    img {
+      max-width: 90vw;
+      display: inline-block;
+    }
 }

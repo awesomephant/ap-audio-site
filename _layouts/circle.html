@@ -10,26 +10,29 @@
     <link rel="stylesheet" href="/ap-audio-site/css/circle.css">
 </head>
 <body>
+  <section class="top">
     <header class="site-header">
         Assembly Point <span>Art Licks Weekend 2018</span>
     </header>
     <h1 class="site-title">
-        GIOTPOR
-    </h1>
+      <img src="/ap-audio-site/assets/logo.png" alt="">
+        </h1>
     {% include blob.svg %}
     <ul class="tracks">
         {% for track in site.data.tracks %}
         <li class="tracks-item">
-            <button class='btn' id="play-btn">
-                <div class="icon">
-                    {% include play.svg %}
-                    {% include pause.svg %}
+            <div class="track-inner">    
+                <button class='btn' id="play-btn">
+                    <div class="icon">
+                        {% include play.svg %}
+                        {% include pause.svg %}
+                    </div>
+                </button>
+                <div class="track-item-copy">
+                    <h3 class='track-artist'>{{track.artist}}</h3>
+                    <h2 class='track-title'>{{track.title}}</h2>
+                    <audio src="" controls></audio>
                 </div>
-            </button>
-            <div class="track-item-copy">
-                <h3 class='track-artist'>{{track.artist}}</h3>
-                <h2 class='track-title'>{{track.title}}</h2>
-                <audio src="" controls></audio>
             </div>
         </li>
         {% endfor %}
@@ -37,6 +40,23 @@
     <footer class="marquee">
         <span>God is only on the periphery of religion</span><em>Now Playing: Title by Artist Name</em><span>God is only on the periphery of religion</span><em>Now Playing: Title by Artist Name</em><span>God is only on the periphery of religion</span>
     </footer>
+    </section>
+    <section class="details">
+      <p class='copy'>
+        <em>God is on the periphery of religion</em>. Individuals themselves are its focal point. Individuals acknowledge a divinity beyond themselves only in order to possess a boundless space in which they can spread out and expand for all eternity their limited, particular, pitiable individuality.
+      </p>
+      <div class="credits">
+
+<p>
+  Album compiled by Natasha Cox and Marios Stamatis.
+</p>
+<p>
+  Web development by Max Kohler.
+</p>
+</div>
+
+
+    </section>
     <script src="/ap-audio-site/dist/main.js"></script>
 </body>
 </html>

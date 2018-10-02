@@ -7,7 +7,7 @@ body {
 }
 
 .bg {
-    position: fixed;
+    position: absolute;
     height: 100vh;
     width: 100vw;
     top: 0;
@@ -94,7 +94,7 @@ body {
 }
 
 .marquee {
-    position: fixed;
+    position: absolute;
     white-space: nowrap;
     overflow: hidden;
     bottom: 0;
@@ -103,11 +103,10 @@ body {
     font-size: 1rem;
     animation: fade-in 0ms 0s both, marquee-small 10s infinite linear;
     @include bp(m){
-        font-size: calc(1rem + .8vw);
+        font-size: $type-medium;
     }
     @include bp(l){
         animation: fade-in 0ms 0s both, marquee 10s infinite linear;
-        font-size: 1.4vw;
     }
     span, em {
         display: inline-block;
@@ -116,7 +115,7 @@ body {
         text-align: center;
         width: 110vw;
         @include bp(l){
-            width: 33.33333vw;
+            width: 40vw;
         }
     }
     span {
