@@ -12,7 +12,7 @@
 $sans: "Sporting";
 $black: rgb(2,2,20);
 
-$type-medium: calc(1rem + .4vw);
+$type-medium: calc(.2rem + 1vw);
 
 @keyframes hover {
     0% {transform: translateY(0) scale(1)}
@@ -31,7 +31,7 @@ $type-medium: calc(1rem + .4vw);
 
 @keyframes marquee {
     0% {text-indent: 0;}
-    100% {text-indent: 40 * -2vw}
+    100% {text-indent: 70 * -2vw}
 }
 @keyframes marquee-small {
     0% {text-indent: 0;}

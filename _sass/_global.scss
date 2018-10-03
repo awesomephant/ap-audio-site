@@ -20,11 +20,14 @@ body {
 }
 
 .site-header {
-    text-align: center;
-    padding: 1rem;
-    position: relative;
+    position: absolute;
+    left: 1rem;
+    top: .5rem;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
     z-index: 100;
-    font-size: 1rem;
+    color: pink;
+    font-size: .8rem;
     span {
         display: block;
         margin-top: .5em;
@@ -99,11 +102,13 @@ body {
     overflow: hidden;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid $black;
+    color: white;
+    mix-blend-mode: multiply;
+//    border-top: 1px solid $black;
     font-size: 1rem;
-    animation: fade-in 0ms 0s both, marquee-small 10s infinite linear;
+    animation: fade-in 0ms 0s both, marquee-small 20s infinite linear;
     @include bp(m){
-        font-size: $type-medium;
+        font-size: 2.5vw;
     }
     @include bp(l){
         animation: fade-in 0ms 0s both, marquee 10s infinite linear;
@@ -115,14 +120,8 @@ body {
         text-align: center;
         width: 110vw;
         @include bp(l){
-            width: 40vw;
+            width: 70vw;
         }
     }
-    span {
-        filter: blur(.5px);
-        @include bp(m){
-            filter: blur(1.5px);
-
-        }
-    }
+    filter: blur(.06em);
 }

@@ -26,14 +26,14 @@ const initPlayers = function(){
 const setTransforms = function(){
     console.log('Setting transforms..')
     let r = window.innerWidth * .35;
-    let ry = window.innerHeight * .35;
+    let ry = window.innerHeight * .45;
 	let letters = document.querySelectorAll('.tracks-item')
 	let n_letters = letters.length;
 	for (let i = 0; i < n_letters; i++){
 		let n = (360 / n_letters) * i;
 		let rotateY = n * -1;
-		let translateX = (Math.sin(((n / 360) * 2 * Math.PI) + Math.PI) * -r) + 30
-		let translateY = Math.cos((n/360) * 2 * Math.PI) * ry;
+		let translateX = (Math.sin(((n / 360) * 2 * Math.PI) + Math.PI) * -r) + 0
+		let translateY = Math.cos((n/360) * 2 * Math.PI) * ry - 0;
 		//translateZ = 0;
 		//translateX = 0;
         rotateY = 0;
@@ -54,8 +54,8 @@ let ticking = false;
 
 let topSection = document.querySelector('.top');
 
-function doSomething(scroll_pos) {
-    topSection.style.filter = 'blur(' + scroll_pos / 20 + 'px)'
+function handleScroll(scroll_pos) {
+    topSection.style.filter = 'blur(' + scroll_pos / 30 + 'px)'
 }
 
 
@@ -63,7 +63,7 @@ window.addEventListener('scroll', function(e) {
     last_known_scroll_position = window.scrollY;
     if (!ticking) {
         window.requestAnimationFrame(function() {
-            doSomething(last_known_scroll_position);
+            handleScroll(last_known_scroll_position);
             ticking = false;
         });
         ticking = true;
@@ -72,5 +72,4 @@ window.addEventListener('scroll', function(e) {
 });
 
 window.addEventListener('resize', setTransforms)
-
 setTransforms()
