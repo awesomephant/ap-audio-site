@@ -43,6 +43,7 @@ const initPlayer = function(element) {
 };
 const initPlayers = function() {
   console.log("Initializing players...");
+  
   tracks = document.querySelectorAll(".tracks-item");
   let tracks_l = tracks.length;
   allAudioElements = document.querySelectorAll('audio')
@@ -51,6 +52,14 @@ const initPlayers = function() {
     initPlayer(track);
   }
 };
+
+const shuffleTracks = function(){
+  let ul = document.querySelector('.tracks');
+  console.log('shuffling')
+  for (var i = ul.children.length; i >= 0; i--) {
+    ul.appendChild(ul.children[Math.random() * i | 0]);
+}
+}
 
 const setTransforms = function() {
   console.log("Setting transforms..");
@@ -83,7 +92,12 @@ const setTransforms = function() {
 };
 
 document.addEventListener("DOMContentLoaded", function() {
+  shuffleTracks();
   initPlayers();
+  if(window.matchMedia("(min-width: 45rem)").matches){ 
+    window.addEventListener("resize", setTransforms);
+    setTransforms();
+  }
 });
 
 let last_known_scroll_position = 0;
@@ -105,8 +119,3 @@ window.addEventListener("scroll", function(e) {
     ticking = true;
   }
 });
-
-if(window.matchMedia("(min-width: 45rem)").matches){ 
-  window.addEventListener("resize", setTransforms);
-  setTransforms();
-}
