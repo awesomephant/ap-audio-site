@@ -8,9 +8,12 @@ const gri = function(min, max) {
 
 const initPlayer = function (element) {
     console.log('Initializing player')
-    let playBtn = element.querySelector('#play-btn')
+    let playBtn = element.querySelector('.play-btn')
     playBtn.addEventListener('click', function () {
+        console.log('click')
+        let audioEl = this.parentNode.querySelector('audio')
         this.parentNode.classList.toggle('is-playing')
+        audioEl.play();
     })
 }
 const initPlayers = function(){

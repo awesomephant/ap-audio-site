@@ -19,7 +19,7 @@
         {% for track in site.data.tracks %}
         <li class="tracks-item">
             <div class="track-inner">    
-                <button class='btn' id="play-btn">
+                <button class='btn play-btn'>
                     <div class="icon">
                         {% include play.svg %}
                         {% include pause.svg %}
@@ -28,7 +28,7 @@
                 <div class="track-item-copy">
                     <h3 class='track-artist'>{{track.artist}}</h3>
                     <h2 class='track-title'>{{track.title}}</h2>
-                    <audio src="" controls></audio>
+                    <audio src="/ap-audio-site/assets/mp3/{{track.mp3}}" controls></audio>
                 </div>
             </div>
         </li>

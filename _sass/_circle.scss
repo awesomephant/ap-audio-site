@@ -79,7 +79,7 @@ body {
         top: 50%;
     }
     audio {
-        display: none;
+        display: block;
     }
     .track-artist {
 //        font-family: 'Times New Roman', Times, serif;
@@ -111,9 +111,11 @@ body {
     text-align: center;
     mix-blend-mode: multiply;
     width: 100%;
+    pointer-events: none;
     z-index: 200;
     transform: translateY(-50%);
     img {
+      pointer-events: none;
       filter: blur(3px);
       max-width: 90vw;
       display: inline-block;
