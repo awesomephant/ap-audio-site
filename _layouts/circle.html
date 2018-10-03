@@ -18,7 +18,7 @@
     <ul class="tracks">
         {% for track in site.data.tracks %}
         <li class="tracks-item">
-            <div class="track-inner">    
+            <div class="track-inner" data-title='{{track.title}}' data-artist='{{track.artist}}'>    
                 <button class='btn play-btn'>
                     <div class="icon">
                         {% include play.svg %}
@@ -35,7 +35,7 @@
         {% endfor %}
     </ul>
     <footer class="marquee">
-        <span>God is only on the periphery of religion</span><em>Now Playing: Title by Artist Name</em><span>God is only on the periphery of religion</span><em>Now Playing: Title by Artist Name</em><span>God is only on the periphery of religion</span>
+        <span>God is only on the periphery of religion</span><em class='now-playing'>Now Playing: Title by Artist Name</em><span>God is only on the periphery of religion</span><em class='now-playing'>Now Playing: Title by Artist Name</em><span>God is only on the periphery of religion</span>
     </footer>
     </section>
     <section class="details">

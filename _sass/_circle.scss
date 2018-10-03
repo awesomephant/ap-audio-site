@@ -69,8 +69,7 @@ body {
 .tracks-item {
     font-size: calc(2vw + 2vh);
     margin-bottom: .5em;
-    flex-basis: 100%;
-    width: 100%;
+    z-index: 1000;
     @include bp(m){
         font-weight: normal;
         font-size: $type-medium;
@@ -79,7 +78,7 @@ body {
         top: 50%;
     }
     audio {
-        display: block;
+        display: none;
     }
     .track-artist {
 //        font-family: 'Times New Roman', Times, serif;
