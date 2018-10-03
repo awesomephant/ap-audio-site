@@ -2,12 +2,12 @@ body {
     overflow-x: hidden;
 }
 .tracks {
-    position: absolute;
     width: 100%;
-    padding-top: 5vh;
-    height: calc(100vh - 8rem);
+    padding-top: 1em;
+    display: flex;
     flex-flow: column;
-    align-items: center;
+    height: 100vh;
+    justify-content: space-evenly;
     @include bp(m){
         height: 100vh;
         display: block;
@@ -67,10 +67,15 @@ body {
 }
 
 .tracks-item {
-    font-size: calc(2vw + 2vh);
+    font-size: 1rem;
+    @include bp(s){
+        font-size: 5vw;
+    }
+    max-width: 90%;
     margin-bottom: .5em;
     z-index: 1000;
     @include bp(m){
+        max-width: none;
         font-weight: normal;
         font-size: $type-medium;
         position: absolute;
@@ -81,9 +86,7 @@ body {
         display: none;
     }
     .track-artist {
-//        font-family: 'Times New Roman', Times, serif;
         margin-bottom: .2em;
-        //       font-size: 1.4em;
     }
 }
 
@@ -95,7 +98,7 @@ body {
 .track-inner {
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-flow: row;
     animation: hover infinite ease-in-out, fade-in both;
     @include bp(m){

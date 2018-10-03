@@ -106,5 +106,7 @@ window.addEventListener("scroll", function(e) {
   }
 });
 
-window.addEventListener("resize", setTransforms);
-setTransforms();
+if(window.matchMedia("(min-width: 45rem)").matches){ 
+  window.addEventListener("resize", setTransforms);
+  setTransforms();
+}

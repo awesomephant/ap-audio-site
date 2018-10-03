@@ -31,7 +31,7 @@ $type-medium: calc(.2rem + .5vw + .6vh);
 
 @keyframes marquee {
     0% {text-indent: 0;}
-    100% {text-indent: 70 * -2vw}
+    100% {text-indent: 90 * -2vw}
 }
 @keyframes marquee-small {
     0% {text-indent: 0;}

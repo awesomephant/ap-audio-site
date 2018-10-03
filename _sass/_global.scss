@@ -105,9 +105,8 @@ body {
     width: 100%;
     color: white;
     mix-blend-mode: multiply;
-//    border-top: 1px solid $black;
-    font-size: 1rem;
     animation: fade-in 0ms 0s both, marquee-small 20s infinite linear;
+    font-size: 12vw;
     @include bp(m){
         font-size: 2.5vw;
     }
@@ -121,8 +120,15 @@ body {
         text-align: center;
         width: 110vw;
         @include bp(l){
-            width: 70vw;
+            width: 90vw;
         }
     }
     filter: blur(.06em);
 }
+
+// TODO: Make the marquee work for titles of different length
+// The way to do this is as follows:
+// 1. When a track is played, measure how wide the marquee text is
+// 2. Turn that measurement into a fraction of the screen width, i.e vw units
+// 3. Add that to however wide the "God is on the periphery.." bit is
+// 4. Update the keyframe animation to match that amount of vw units
